@@ -22,7 +22,7 @@ Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** ð
 
 1. **Clone or Download this repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/VidhyashreeX/Vidhyashree_S_mood2emoji
    cd mood2emoji
    ```
 
