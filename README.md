@@ -1,8 +1,8 @@
-# Mood2Emoji - Kid-Safe Text Mood Detector 😀😐😞
+# Mood2Emoji - Kid-Safe Text Mood Detector 
 
 A simple, educational web application that teaches students (ages 12-16) about sentiment analysis and natural language processing through an interactive mood detection tool.
 
-## 🎯 What Does This App Do?
+##  What Does This App Do?
 
 Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** 😀, **neutral** 😐, or **sad** 😞. It's a fun, hands-on way for students to learn how computers can understand emotions in text!
 
@@ -13,11 +13,10 @@ Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** �
 - **Teacher Mode**: Educational section explaining how sentiment analysis works
 - **Real-Time Learning**: See the "mood score" behind each analysis
 
-## 🚀 Setup and Run Instructions
+##  Setup and Run Instructions
 
 ### Prerequisites
 - Python 3.9 or higher
-- Internet connection (for initial setup)
 
 ### Installation Steps
 
@@ -46,7 +45,7 @@ Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** �
    - The app will automatically open at `http://localhost:5000`
    - If not, manually navigate to the URL shown in your terminal
 
-## 📚 How Kids Learn From This
+##  How Kids Learn From This
 
 ### Learning Objectives:
 1. **Introduction to AI/ML**: Understand how computers can "read" emotions
@@ -62,7 +61,7 @@ Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** �
 - Context matters: "not good" is different from "good"
 - Real-world applications: social media moderation, customer reviews, chatbots
 
-## 👩‍🏫 Teaching This in 60 Minutes
+## Teaching This in 60 Minutes
 
 ### Lesson Structure:
 
@@ -99,7 +98,7 @@ Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** �
 - Share: One surprising thing you learned
 - Homework: Find 3 apps that might use sentiment analysis
 
-## 🔧 How It Works (Technical Overview)
+##  How It Works (Technical Overview)
 
 ### Architecture:
 ```
@@ -118,12 +117,9 @@ User Input → Safety Check → TextBlob Analysis → Polarity Score → Emoji O
   - Score < -0.2 → Sad 😞
   - Score between -0.2 and 0.2 → Neutral 😐
 
-### Safety Features:
-- Custom profanity filter checks for inappropriate words
-- Returns neutral emoji with kind message if inappropriate content detected
-- All feedback messages are age-appropriate and encouraging
 
-## ⚠️ Known Limitations
+
+##  Known Limitations
 
 ### Technical Limitations:
 1. **Sarcasm Detection**: Cannot understand sarcasm or irony
@@ -141,27 +137,23 @@ User Input → Safety Check → TextBlob Analysis → Polarity Score → Emoji O
 5. **Simple Profanity Filter**: Basic word list, not comprehensive
    - Could miss creative misspellings or new inappropriate terms
 
-### Educational Limitations:
-- This is a simplified model for learning purposes
-- Professional sentiment analysis systems use more sophisticated techniques
-- Real-world applications often use machine learning models trained on millions of examples
 
 ### Design Decisions:
 - Intentionally simple to keep focus on learning concepts
 - Trade-off: Accuracy vs. Understandability (we chose understandability)
 - No data storage or user tracking (privacy-first for students)
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 After using this app, students should be able to:
-- ✅ Explain what sentiment analysis is in their own words
-- ✅ Identify positive, negative, and neutral text examples
-- ✅ Understand how computers use math to analyze text
-- ✅ Recognize real-world applications of sentiment analysis
-- ✅ Discuss ethical considerations of AI text analysis
-- ✅ Appreciate the limitations of current AI technology
+-  Explain what sentiment analysis is in their own words
+-  Identify positive, negative, and neutral text examples
+-  Understand how computers use math to analyze text
+-  Recognize real-world applications of sentiment analysis
+- Discuss ethical considerations of AI text analysis
+- Appreciate the limitations of current AI technology
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 mood2emoji/
@@ -171,35 +163,13 @@ mood2emoji/
 └── lesson_plan.pdf    # 60-minute lesson plan for teachers
 ```
 
-Clean, minimal, and easy to understand!
 
-## 🌟 Extension Ideas
 
-For advanced students or extra time:
-1. Add more emotion categories (angry, surprised, fearful)
-2. Create a "word contribution" feature showing which words affected the score most
-3. Build a comparison mode to analyze two sentences side-by-side
-4. Add language translation before analysis
-5. Create a game: "Make the happiest/saddest sentence possible"
-
-## 📖 References & Credits
+##  References
 
 - **TextBlob Documentation**: https://textblob.readthedocs.io/
 - **Streamlit Documentation**: https://docs.streamlit.io/
-- **Sentiment Analysis Concept**: Based on natural language processing techniques
-- **Educational Design**: Follows principles of constructionist learning
+-
 
-## 🤝 Contributing
 
-This is an educational project designed for learning. If you're a teacher using this:
-- Feel free to modify the code for your classroom
-- Share your lesson plan improvements
-- Report any issues or suggestions
-
-## 📄 License
-
-This project is created for educational purposes. Feel free to use and modify for teaching and learning.
-
----
-
-**Built with ❤️ for young learners | Perfect for Ages 12-16 | Safe & Educational**
+**Built by Vidhyashree S. As a pert of my curriculum Developer Intern — Assignment**

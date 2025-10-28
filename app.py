@@ -109,19 +109,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("😀 Mood2Emoji Detector 😐😞")
+st.title("Mood2Emoji Detector")
 st.markdown("#### Curriculum Developer Intern — Assignment")
 st.markdown("### Discover the mood in your text!")
 
-st.markdown("""
-<div class="info-box">
-    <strong>How it works:</strong> Type a sentence and I'll tell you if it sounds happy 😀, neutral 😐, or sad 😞!
-    This is a safe space for learning about how computers understand emotions in text.
-</div>
-""", unsafe_allow_html=True)
+st.markdown(
+    "**How it works:** Type a sentence and I'll tell you if it sounds happy (😀), neutral (😐), or sad (😞).\n\n"
+    "This is a safe space for learning about how computers understand emotions in text."
+)
 
 user_input = st.text_input(
-    "✍️ Type your sentence here:",
+    " Type your sentence here:",
     placeholder="Example: I love learning new things!",
     max_chars=200
 )
@@ -129,7 +127,7 @@ user_input = st.text_input(
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    analyze_button = st.button("🔍 Analyze My Text!", use_container_width=True)
+    analyze_button = st.button(" Analyze My Text!", use_container_width=True)
 
 if analyze_button and user_input:
     emoji, message = get_mood_emoji_and_message(user_input)
@@ -141,7 +139,7 @@ if analyze_button and user_input:
     polarity = blob.sentiment.polarity
     
     st.markdown("---")
-    st.markdown("### 📊 Behind the Scenes")
+    st.markdown("### Behind the Scenes")
     col_a, col_b, col_c = st.columns(3)
     with col_a:
         st.metric("Words Analyzed", len(user_input.split()))
@@ -153,48 +151,35 @@ if analyze_button and user_input:
 
 st.markdown("---")
 
-with st.expander("👩‍🏫 Teacher Mode - How Does This Work?"):
-    st.markdown("""
-    <div class="teacher-box">
-        <h3>Understanding Sentiment Analysis 🧠</h3>
-        <p><strong>Sentiment Analysis</strong> is a way for computers to understand emotions in text!</p>
-        
-        <h4>Step-by-Step Process:</h4>
-        <ol>
-            <li><strong>Text Input:</strong> You type a sentence</li>
-            <li><strong>Safety Check:</strong> The app checks if words are appropriate</li>
-            <li><strong>Word Analysis:</strong> The computer looks at each word</li>
-            <li><strong>Mood Scoring:</strong> Words get positive or negative scores
-                <ul>
-                    <li>Happy words like "love", "great", "awesome" = Positive (+)</li>
-                    <li>Sad words like "bad", "terrible", "sad" = Negative (-)</li>
-                    <li>Neutral words like "the", "is", "and" = No score (0)</li>
-                </ul>
-            </li>
-            <li><strong>Calculate Average:</strong> Add up all scores and find the average</li>
-            <li><strong>Result:</strong> Show an emoji based on the final score!</li>
-        </ol>
-        
-        <h4>The Math Behind It:</h4>
-        <p>If the average score is:</p>
-        <ul>
-            <li>Above +0.2 → 😀 Happy</li>
-            <li>Below -0.2 → 😞 Sad</li>
-            <li>Between -0.2 and +0.2 → 😐 Neutral</li>
-        </ul>
-        
-        <h4>Real-World Applications:</h4>
-        <ul>
-            <li>📱 Social media apps detect harmful comments</li>
-            <li>🛍️ Companies read product reviews</li>
-            <li>📰 News organizations analyze public opinion</li>
-            <li>🎮 Games respond to player feedback</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("### 🔬 Try These Examples:")
-    st.code("I love spending time with my friends! (Should be 😀)")
-    st.code("This is a normal sentence. (Should be 😐)")
-    st.code("I feel terrible today. (Should be 😞)")
+with st.expander("Teacher Mode - How Does This Work?"):
+    st.subheader("Understanding Sentiment Analysis")
+    st.markdown(
+        "- Sentiment analysis helps computers estimate emotion in text.\n"
+        "- This app uses a simple score from -1 (negative) to +1 (positive)."
+    )
+    st.markdown("#### Steps")
+    st.markdown(
+        "1. Text input\n"
+        "2. Safety check\n"
+        "3. Word analysis\n"
+        "4. Mood scoring and average\n"
+        "5. Emoji result"
+    )
+    st.markdown("#### How we pick the emoji")
+    st.markdown(
+        "- Score > +0.2 → Happy\n"
+        "- Score < -0.2 → Sad\n"
+        "- Otherwise → Neutral"
+    )
+    st.markdown("#### Real-world uses")
+    st.markdown(
+        "- Social media moderation\n"
+        "- Product review insights\n"
+        "- News/public opinion\n"
+        "- Games reacting to feedback"
+    )
+    st.markdown("#### Try these examples")
+    st.text("I love spending time with my friends!  → 😀")
+    st.text("This is a normal sentence.           → 😐")
+    st.text("I feel terrible today.               → 😞")
 
