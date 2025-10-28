@@ -110,6 +110,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("😀 Mood2Emoji Detector 😐😞")
+st.markdown("#### Curriculum Developer Intern — Assignment")
 st.markdown("### Discover the mood in your text!")
 
 st.markdown("""
@@ -197,9 +198,3 @@ with st.expander("👩‍🏫 Teacher Mode - How Does This Work?"):
     st.code("This is a normal sentence. (Should be 😐)")
     st.code("I feel terrible today. (Should be 😞)")
 
-st.markdown("---")
-st.markdown("""
-    <div style="text-align: center; color: #7f8c8d; padding: 20px;">
-        <small>Built with ❤️ for young learners | Ages 12-16 | Safe & Educational</small>
-    </div>
-""", unsafe_allow_html=True)
