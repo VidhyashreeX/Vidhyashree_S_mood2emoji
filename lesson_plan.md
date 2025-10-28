@@ -104,8 +104,8 @@ User Types Sentence → Safety Check → Word Analysis → Score Calculation →
 
 5. **Decision Logic**:
    ```
-   If score > 0.1  → 😀 Happy
-   If score < -0.1 → 😞 Sad
+   If score > 0.2  → 😀 Happy
+   If score < -0.2 → 😞 Sad
    Else           → 😐 Neutral
    ```
 
@@ -168,9 +168,9 @@ blob = TextBlob(user_input)
 polarity = blob.sentiment.polarity  # Score from -1 to +1
 
 # 3. Decide which emoji
-if polarity > 0.1:
+if polarity > 0.2:
     emoji = "😀"
-elif polarity < -0.1:
+elif polarity < -0.2:
     emoji = "😞"
 else:
     emoji = "😐"

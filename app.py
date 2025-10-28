@@ -33,7 +33,7 @@ def get_mood_emoji_and_message(text):
     blob = TextBlob(text)
     polarity = blob.sentiment.polarity
     
-    if polarity > 0.1:
+    if polarity > 0.2:
         messages = [
             "Sounds happy! 🌟",
             "That's a positive vibe! ✨",
@@ -42,7 +42,7 @@ def get_mood_emoji_and_message(text):
         ]
         import random
         return "😀", random.choice(messages)
-    elif polarity < -0.1:
+    elif polarity < -0.2:
         messages = [
             "Sounds a bit sad. 💙",
             "That seems negative. It's okay to feel this way sometimes.",
@@ -147,7 +147,7 @@ if analyze_button and user_input:
     with col_b:
         st.metric("Mood Score", f"{polarity:.2f}")
     with col_c:
-        mood_type = "Positive" if polarity > 0.1 else "Negative" if polarity < -0.1 else "Neutral"
+        mood_type = "Positive" if polarity > 0.2 else "Negative" if polarity < -0.2 else "Neutral"
         st.metric("Mood Type", mood_type)
 
 st.markdown("---")
@@ -177,9 +177,9 @@ with st.expander("👩‍🏫 Teacher Mode - How Does This Work?"):
         <h4>The Math Behind It:</h4>
         <p>If the average score is:</p>
         <ul>
-            <li>Above +0.1 → 😀 Happy</li>
-            <li>Below -0.1 → 😞 Sad</li>
-            <li>Between -0.1 and +0.1 → 😐 Neutral</li>
+            <li>Above +0.2 → 😀 Happy</li>
+            <li>Below -0.2 → 😞 Sad</li>
+            <li>Between -0.2 and +0.2 → 😐 Neutral</li>
         </ul>
         
         <h4>Real-World Applications:</h4>

@@ -29,7 +29,7 @@ Mood2Emoji takes a sentence you type and tells you whether it sounds **happy** �
 
 2. **Install Dependencies**
    ```bash
-   pip install -streamlit textblob
+   pip install streamlit textblob
    ```
 
 3. **Download TextBlob Language Data** (First time only)
@@ -114,9 +114,9 @@ User Input → Safety Check → TextBlob Analysis → Polarity Score → Emoji O
 ### Sentiment Scoring:
 - TextBlob analyzes text and returns a polarity score from -1.0 (very negative) to +1.0 (very positive)
 - Thresholds:
-  - Score > 0.1 → Happy 😀
-  - Score < -0.1 → Sad 😞
-  - Score between -0.1 and 0.1 → Neutral 😐
+  - Score > 0.2 → Happy 😀
+  - Score < -0.2 → Sad 😞
+  - Score between -0.2 and 0.2 → Neutral 😐
 
 ### Safety Features:
 - Custom profanity filter checks for inappropriate words
