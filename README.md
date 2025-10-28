@@ -172,4 +172,4 @@ mood2emoji/
 -
 
 
-**Built by Vidhyashree S. As a pert of my curriculum Developer Intern — Assignment**
+**Built by Vidhyashree S . As a part of my curriculum Developer Intern — Assignment**
